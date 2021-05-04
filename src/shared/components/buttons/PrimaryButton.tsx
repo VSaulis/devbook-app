@@ -1,21 +1,23 @@
-import React, {ComponentProps, FunctionComponent} from "react";
-import Button from "./Button";
-import {StyleSheet} from "react-native";
-import {Colors, FontSizes} from "styles";
+import React, { ComponentProps, FunctionComponent } from 'react';
+import Button from './Button';
+import { StyleSheet } from 'react-native';
+import { Colors } from 'styles';
 
-const PrimaryButton: FunctionComponent<ComponentProps<typeof Button>> = (props) => {
-  return <Button labelStyle={styles.label} style={styles.container} {...props}/>
+const PrimaryButton: FunctionComponent<ComponentProps<typeof Button>> = (
+  props
+) => {
+  return (
+    <Button labelStyle={styles.label} style={styles.container} {...props} />
+  );
 };
 
 const styles = StyleSheet.create({
   container: {
-    width: '100%',
+    backgroundColor: Colors.Primary
   },
   label: {
-    color: Colors.Text.Secondary,
-    textTransform: 'uppercase',
-    fontSize: FontSizes.XL,
-  },
+    color: Colors.White
+  }
 });
 
 export default PrimaryButton;

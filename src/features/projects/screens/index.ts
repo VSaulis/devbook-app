@@ -1,3 +1,3 @@
-import ProjectsScreen from "./ProjectsScreen";
+import ProjectsScreen from './ProjectsScreen';
 
-export {ProjectsScreen};
+export { ProjectsScreen };

@@ -1,3 +1,3 @@
-import RecordsScreen from "./RecordsScreen";
+import RecordsScreen from './RecordsScreen';
 
-export {RecordsScreen};
+export { RecordsScreen };

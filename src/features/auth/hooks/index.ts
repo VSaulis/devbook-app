@@ -1,4 +1,4 @@
-import useLogin from "./useLogin";
-import useCodeConfirmation from "./useCodeConfirmation";
+import useLogin from './useLogin';
+import useCodeConfirmation from './useCodeConfirmation';
 
-export {useLogin, useCodeConfirmation};
+export { useLogin, useCodeConfirmation };

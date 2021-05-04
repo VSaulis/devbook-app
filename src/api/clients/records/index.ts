@@ -1,7 +1,11 @@
-import httpClient from "api/httpClient";
-import {BaseResponse, ResultResponse, ListResponse} from "core/contracts";
-import {AddRecordRequest, EditRecordRequest} from "core/contracts/records";
-import {RecordsListItem, Record} from "core/models/records";
+import httpClient from 'api/httpClient';
+import { BaseResponse, ResultResponse, ListResponse } from 'api/types';
+import {
+  AddRecordRequest,
+  EditRecordRequest,
+  RecordsListItem,
+  Record
+} from 'api/clients/records/types';
 
 const baseUrl = '/restaurants';
 

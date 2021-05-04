@@ -1,27 +1,22 @@
+import { API_URL } from 'react-native-dotenv';
 import axios from 'axios';
+import { store } from 'store';
 
 const httpClient = axios.create({
-  baseURL: 'http://192.168.1.143:5000/api',
+  baseURL: API_URL
 });
 
 httpClient.interceptors.request.use(
   async (request) => {
-    console.log(request);
+    const { token } = store.getState().auth;
+    if (token) {
+      request.headers.Authorization = `Bearer ${token}`;
+    }
     return request;
   },
   (error) => Promise.reject(error)
 );
 
-httpClient.interceptors.response.use(
-  async (response) => {
-    console.log(response);
-    return response.data;
-  },
-  (error) => {
-    const { response } = error;
-    console.log(response);
-    return Promise.reject(error);
-  }
-);
+httpClient.interceptors.response.use(async (response) => response.data);
 
 export default httpClient;

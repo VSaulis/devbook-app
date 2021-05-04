@@ -1,8 +1,16 @@
-import {authRoute, calendarRoute, codeConfirmRoute, loginRoute, mainRoute, projectsRoute, recordsRoute} from "./routes";
+import {
+  authRoute,
+  calendarRoute,
+  codeConfirmationRoute,
+  loginRoute,
+  mainRoute,
+  projectsRoute,
+  recordsRoute
+} from './routes';
 
 export type AuthScreens = {
   [loginRoute]: undefined;
-  [codeConfirmRoute]: { phone: string };
+  [codeConfirmationRoute]: { phone: string };
 };
 
 export type MainScreens = {

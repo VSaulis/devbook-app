@@ -1,6 +1,14 @@
-import React, {FunctionComponent, ComponentProps} from "react";
-import {StyleProp, TextInput, TextStyle, ViewStyle, StyleSheet, View, Text} from "react-native";
-import {Colors, FontSizes} from "styles";
+import React, { FunctionComponent, ComponentProps } from 'react';
+import {
+  StyleProp,
+  TextInput,
+  TextStyle,
+  ViewStyle,
+  StyleSheet,
+  View,
+  Text
+} from 'react-native';
+import { Colors, FontSizes } from 'styles';
 
 interface Props extends ComponentProps<typeof TextInput> {
   label: string;
@@ -10,12 +18,12 @@ interface Props extends ComponentProps<typeof TextInput> {
 }
 
 const Input: FunctionComponent<Props> = (props) => {
-  const {style, containerStyle, label, error, ...rest} = props;
+  const { style, containerStyle, label, error, ...rest } = props;
 
   return (
     <View style={[styles.container, containerStyle]}>
       <Text style={styles.label}>{label}</Text>
-      <TextInput {...rest} style={[styles.input, style]}/>
+      <TextInput {...rest} style={[styles.input, style]} />
       {error && <Text style={styles.error}>{error}</Text>}
     </View>
   );
@@ -23,16 +31,16 @@ const Input: FunctionComponent<Props> = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    width: '100%',
+    width: '100%'
   },
   label: {
     color: Colors.Text.Secondary,
     textTransform: 'uppercase',
-    fontSize: FontSizes.XL,
+    fontSize: FontSizes.XL
   },
   input: {
     fontSize: FontSizes.XXL,
-    height: 40,
+    height: 36,
     padding: 0,
     fontFamily: 'Regular',
     borderBottomColor: Colors.Border.Light,
@@ -40,8 +48,8 @@ const styles = StyleSheet.create({
   },
   error: {
     fontSize: FontSizes.XL,
-    color: Colors.Alert.Danger,
-  },
+    color: Colors.Alert.Danger
+  }
 });
 
 export default Input;

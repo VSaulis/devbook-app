@@ -7,8 +7,8 @@ export const mainRoute: MainRoute = 'Main';
 export type LoginRoute = 'Login';
 export const loginRoute: LoginRoute = 'Login';
 
-export type CodeConfirmRoute = 'CodeConfirm';
-export const codeConfirmRoute: CodeConfirmRoute = 'CodeConfirm';
+export type CodeConfirmationRoute = 'CodeConfirmation';
+export const codeConfirmationRoute: CodeConfirmationRoute = 'CodeConfirmation';
 
 export type RecordsRoute = 'Records';
 export const recordsRoute: RecordsRoute = 'Records';

@@ -1,3 +1,3 @@
-import CalendarScreen from "./CalendarScreen";
+import CalendarScreen from './CalendarScreen';
 
-export {CalendarScreen};
+export { CalendarScreen };

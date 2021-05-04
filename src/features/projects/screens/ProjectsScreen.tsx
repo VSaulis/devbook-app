@@ -1,12 +1,16 @@
-import React, {FunctionComponent} from "react";
-import {View} from "react-native";
+import React, { FunctionComponent } from 'react';
+import { SafeScreenContainer } from 'shared/components';
+import { useProjects } from '../hooks';
+import { ProjectsList } from '../components';
 
-const ProjectsScreen: FunctionComponent<void> = () => {
+const ProjectsScreen: FunctionComponent<{}> = () => {
+  const { projects } = useProjects();
+
   return (
-    <View>
-
-    </View>
-  )
+    <SafeScreenContainer>
+      <ProjectsList items={projects} />
+    </SafeScreenContainer>
+  );
 };
 
 export default ProjectsScreen;

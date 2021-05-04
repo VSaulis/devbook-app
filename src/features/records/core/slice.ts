@@ -1,6 +1,6 @@
-import {createSlice} from "@reduxjs/toolkit";
-import {getRecordsAction} from "./actions";
-import {RecordsListItem} from "../../../core/models/records";
+import { createSlice } from '@reduxjs/toolkit';
+import { getRecordsAction } from './actions';
+import { RecordsListItem } from 'api/clients/records/types';
 
 interface State {
   isLoading: boolean;
@@ -11,11 +11,11 @@ interface State {
 const initialState: State = {
   isLoading: false,
   records: [],
-  count: 0,
+  count: 0
 };
 
 const recordsSlice = createSlice({
-  name: 'auth',
+  name: 'records',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
@@ -30,7 +30,7 @@ const recordsSlice = createSlice({
     builder.addCase(getRecordsAction.rejected, (state) => {
       state.isLoading = false;
     });
-  },
+  }
 });
 
-export const {reducer} = recordsSlice;
+export const { reducer } = recordsSlice;

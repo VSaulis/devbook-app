@@ -1,9 +1,9 @@
-import {createSlice} from "@reduxjs/toolkit";
-import {confirmCodeAction, loginAction} from "./actions";
+import { createSlice } from '@reduxjs/toolkit';
+import { confirmCodeAction, loginAction } from './actions';
 
 interface State {
   isLoading: boolean;
-  isLogged: boolean
+  isLogged: boolean;
   token: string | null;
   refreshToken: string | null;
 }
@@ -12,7 +12,7 @@ const initialState: State = {
   isLoading: false,
   isLogged: false,
   token: null,
-  refreshToken: null,
+  refreshToken: null
 };
 
 const authSlice = createSlice({
@@ -44,7 +44,7 @@ const authSlice = createSlice({
     builder.addCase(loginAction.rejected, (state) => {
       state.isLoading = false;
     });
-  },
+  }
 });
 
-export const {reducer} = authSlice;
+export const { reducer } = authSlice;

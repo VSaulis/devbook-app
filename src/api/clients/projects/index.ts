@@ -1,7 +1,11 @@
-import httpClient from "api/httpClient";
-import {BaseResponse, ResultResponse, ListResponse} from "core/contracts";
-import {AddProjectRequest, EditProjectRequest} from "core/contracts/projects";
-import {Project, ProjectsListItem} from "core/models/projects";
+import httpClient from 'api/httpClient';
+import { BaseResponse, ResultResponse, ListResponse } from 'api/types';
+import {
+  AddProjectRequest,
+  EditProjectRequest,
+  Project,
+  ProjectsListItem
+} from 'api/clients/projects/types';
 
 const baseUrl = '/projects';
 

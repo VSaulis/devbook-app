@@ -2,6 +2,7 @@
   <dictionary name="vytautas.saulis">
     <words>
       <w>axios</w>
+      <w>dotenv</w>
       <w>persistor</w>
       <w>walkthrough</w>
     </words>
